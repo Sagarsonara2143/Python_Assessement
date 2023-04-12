@@ -1,0 +1,12 @@
+2023-04-12 22:43:44.723063
+E-Note Title : python
+E-Note Description : java
+		Note Generator : sagar
+
+-----------------------------------------------------------
+2023-04-12 22:43:51.491724
+E-Note Title : python
+E-Note Description : java
+		Note Generator : sanjay
+
+-----------------------------------------------------------
