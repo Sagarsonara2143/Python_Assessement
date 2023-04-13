@@ -10,3 +10,9 @@ E-Note Description : java
 		Note Generator : sanjay
 
 -----------------------------------------------------------
+2023-04-13 22:55:25.095189
+E-Note Title : Class and objects
+E-Note Description : Inheritance
+		Note Generator : Sagar Sonara
+
+-----------------------------------------------------------
