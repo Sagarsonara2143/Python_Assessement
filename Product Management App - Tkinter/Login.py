@@ -11,5 +11,14 @@ root.title("Product Management App")
 root.resizable(width=False,height=False)                            # it will remove Maximise symbol from web page 
 
 
-l_name=Label(root,text="Name ", font=("Sans-serif 15"))
-l_name.place(x = 30, y=50)
+l_email=Label(root,text="Email", font=("Sans-serif 15"))
+l_email.place(x = 30, y=50)
+
+l_pwd = Label(root, text="Password",font=("Sans-serif 15"))
+l_pwd.place(x = 30, y = 100)
+
+e_email = Entry(root, bd=2,width=30, font=("Sans-serif 15"))
+e_email.place(x = 150, y=50)
+
+e_pwd = Entry(root, bd=2,width=30, font=("Sans-serif 15"))
+e_pwd.place(x = 150, y=100)
