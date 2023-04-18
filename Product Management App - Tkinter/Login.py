@@ -11,24 +11,28 @@ root.title("Product Management App")
 root.resizable(width=False,height=False)                            # it will remove Maximise symbol from web page 
 
 
+l_lable=Label(root,text="Product Management Application", font=("Sans-serif ",20),fg="red",bg="yellow").place(x =70, y=20)
+
 # Label and place
 l_email=Label(root,text="Email", font=("Sans-serif 15"))
-l_email.place(x = 30, y=50)
+l_email.place(x = 30, y=100)
 
 l_pwd = Label(root, text="Password",font=("Sans-serif 15"))
-l_pwd.place(x = 30, y = 100)
+l_pwd.place(x = 30, y = 150)
 
+l_text=Label(root, text="Need an account ?").place(x=100, y=100)
+l_reg = Label(root, text="Sign up").place(x=70, y=200)
 
 #Entry box 
 e_email = Entry(root, bd=2,width=30, font=("Sans-serif 15"))
-e_email.place(x = 150, y=50)
+e_email.place(x = 150, y=100)
 
 e_pwd = Entry(root, bd=2,width=30, font=("Sans-serif 15"))
-e_pwd.place(x = 150, y=100)
+e_pwd.place(x = 150, y=150)
 
 #Button
 login=Button(root,text="LOGIN",font=("Sans-serif 15"),fg="black",bg="orange", width=10)
-login.place(x=200,y=150)
+login.place(x=200,y=250)
 
 root.mainloop()
 
