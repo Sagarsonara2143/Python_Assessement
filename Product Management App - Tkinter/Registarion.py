@@ -39,7 +39,7 @@ def register():
             msg.showinfo("Registration Status","Registration form created Successfully")
         
             root.destroy()
-            import page
+            import Login
         else:
              l_msg=Label(root,text="Password and confirm password does not match", font=("Sans-serif 14"),fg="red")
              l_msg.place(x = 100, y=400)
