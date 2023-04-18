@@ -27,7 +27,7 @@ while True:
     if choice == 1:
         while True:
             e_generator=input("Enter Python E-Note Generator Name : ")
-            if e_generator.isalpha() or " ":
+            if e_generator.isalpha() or "":
                 e_title=input("Enter Python E-Note Title : ")
                 e_content=input("Enter E-Note Content : ")
                 break
