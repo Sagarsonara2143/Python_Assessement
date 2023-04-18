@@ -28,7 +28,8 @@ l_pwd = Label(root, text="Password",font=("Sans-serif 15"))
 l_pwd.place(x = 30, y = 150)
 
 l_text=Label(root, text="Need an account ?",font=("Sans-serif ",12)).place(x=350, y=200)
-l_reg =Button(root, text="Sign up",font=("Sans-serif 14 underline"),fg="blue",command = register_page, bd=0).place(x=350, y=220)
+l_reg =Button(root, text="Sign up",font=("Sans-serif 14 underline"),fg="blue",command = register_page, bd=0)
+l_reg.place(x=350, y=220)
 
 #Entry box 
 e_email = Entry(root, bd=2,width=30, font=("Sans-serif 15"))
