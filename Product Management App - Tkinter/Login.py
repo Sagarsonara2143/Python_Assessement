@@ -8,6 +8,12 @@ from PIL import ImageTk, Image
 def register_page():
     root.destroy()
     import Registration
+
+def login():
+    if e_email.get()=="" or e_pwd.get()=="":
+        msg.showerror("Login Status","Email and/or Pwd does not matched")
+    else:
+        l_print=Label(root,text="Login Successfully", font=("Sans-serif",20)).place(x=150 ,y=350)
     
 
 root = tk.Tk()                                                                             # it will open blank page
@@ -39,7 +45,7 @@ e_pwd = Entry(root, bd=2,width=30, font=("Sans-serif 15"))
 e_pwd.place(x = 150, y=150)
 
 #Button
-login=Button(root,text="LOGIN",font=("Sans-serif 15"),fg="black",bg="orange", width=10)
+login=Button(root,text="LOGIN",font=("Sans-serif 15"),fg="black",bg="orange", width=10,command=login)
 login.place(x=200,y=250)
 
 root.mainloop()
