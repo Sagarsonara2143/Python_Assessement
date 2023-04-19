@@ -4,6 +4,14 @@ import mysql.connector                                          #mysql connector
 import tkinter.messagebox as msg
 from PIL import ImageTk, Image
 
+#Connect to database
+def create_con():
+    return mysql.connector.connect(
+                host = "localhost",
+                user = "root",
+                password = "",
+                database = "python"
+        )
 
 def register_page():
     root.destroy()
@@ -11,10 +19,17 @@ def register_page():
 
 def login():
     if e_email.get()=="" or e_pwd.get()=="":
-        msg.showerror("Login Status","Email and/or Pwd does not matched")
+        l_print=Label(root,text="All fields are required Mandatory", font=("Sans-serif",15),fg="red").place(x=120 ,y=300)
     else:
+        con=create_con()
+        cursor=con.cursor()
+        query = "select * from registration1 where email = %s"
+        args=(e_email.get(),)
+        cursor.execute(query,args)
+        data=cursor.fetchall()
+        print(data)
         l_print=Label(root,text="Login Successfully", font=("Sans-serif",20)).place(x=150 ,y=350)
-    
+        con.close()
 
 root = tk.Tk()                                                                             # it will open blank page
 
@@ -24,7 +39,7 @@ root.resizable(width=False,height=False)                            # it will re
 #root.config(bg="white")
 
 
-l_lable=Label(root,text="Product Management Application", font=("Sans-serif ",20),fg="red",bg="yellow").place(x =70, y=20)
+l_lable=Label(root,text="Product Management Application", font=("Sans-serif ",20),fg="white",bg="black").place(x =100, y=20)
 
 # Label and place
 l_email=Label(root,text="Email", font=("Sans-serif 15"))
