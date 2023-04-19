@@ -21,5 +21,5 @@ root.title("Product Management App")
 root.resizable(width=False,height=False) 
 
 
-l = Label(root,text="Welcome to Index",font=("Sans-serif",15),fg="red")
-l.place(x=120 ,y=300)
+l = Label(root,text="Products",font=("Sans-serif",25),fg="red", width=30,bg="black")
+l.place(x=15 ,y=10)

@@ -52,7 +52,7 @@ root.resizable(width=False,height=False)                            # it will re
 
 #Create a Label and place in root
 
-l_title = Label(root,text="                    Please Enter details below                      ",font=("Arial bold",18), fg="white")
+l_title = Label(root,text="Please Enter details below",font=("Arial bold",20), fg="white",width=35)
 l_title.place(x = 0, y=0)
 l_title.config(bg="orange")
         
