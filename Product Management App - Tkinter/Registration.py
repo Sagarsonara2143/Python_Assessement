@@ -120,5 +120,4 @@ e_cpwd.place(x = 200, y=350)
 register=Button(root,text="REGISTER",font=("Sans-serif 15"),fg="black",bg="orange",command=register)
 register.place(x=200,y=450)
 
-
 root.mainloop()

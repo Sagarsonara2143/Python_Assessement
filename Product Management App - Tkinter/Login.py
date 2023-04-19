@@ -60,7 +60,7 @@ root = tk.Tk()                                                                  
 root.geometry("600x600")                                                    # size of web page
 root.title("Product Management App")
 root.resizable(width=False,height=False)                            # it will remove Maximise symbol from web page 
-#root.config(bg="white")
+#root.config(bg="white")                                                        # White Backgound 
 
 
 l_lable=Label(root,text="Product Management Application", font=("Sans-serif ",20),fg="white",bg="black").place(x =100, y=20)
