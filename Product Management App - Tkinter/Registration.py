@@ -43,6 +43,11 @@ def register():
         else:
              l_msg=Label(root,text="Password and confirm password does not match", font=("Sans-serif 14"),fg="red")
              l_msg.place(x = 100, y=400)
+
+def login():
+    root.destroy()
+    import Login
+    
             
 root = tk.Tk()                                                                             # it will open blank page
 
@@ -119,5 +124,10 @@ e_cpwd.place(x = 200, y=350)
 #Register Button
 register=Button(root,text="REGISTER",font=("Sans-serif 15"),fg="black",bg="orange",command=register)
 register.place(x=200,y=450)
+
+login=Button(root,text="Account already exists? Log In",font=("Sans-serif 14 underline"),bd=0,command=login)
+login.place(x=300,y=500)
+
+
 
 root.mainloop()
