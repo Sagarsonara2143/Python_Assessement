@@ -55,7 +55,7 @@ root.resizable(width=False,height=False)                            # it will re
 l_title = Label(root,text="                    Please Enter details below                      ",font=("Arial bold",18), fg="white")
 l_title.place(x = 0, y=0)
 l_title.config(bg="orange")
-
+        
 l_name=Label(root,text="Name ", font=("Sans-serif 15"))
 l_name.place(x = 30, y=50)
 

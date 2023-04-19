@@ -18,19 +18,43 @@ def register_page():
     import Registration
 
 def login():
+    
     if e_email.get()=="" or e_pwd.get()=="":
-        l_print=Label(root,text="All fields are required Mandatory", font=("Sans-serif",15),fg="red").place(x=120 ,y=300)
+        l_msg1=Label(root,text="All fields are required Mandatory", font=("Sans-serif",15),fg="red").place(x=120 ,y=300)
     else:
-        con=create_con()
-        cursor=con.cursor()
-        query = "select * from registration1 where email = %s"
-        args=(e_email.get(),)
-        cursor.execute(query,args)
-        data=cursor.fetchall()
-        print(data)
-        l_print=Label(root,text="Login Successfully", font=("Sans-serif",20)).place(x=150 ,y=350)
-        con.close()
-
+        try:
+            con=create_con()
+            cursor=con.cursor()
+            query = "select * from registration1 where email = %s"
+            args=(e_email.get(),)
+            cursor.execute(query,args)
+            data=cursor.fetchall()
+            #print(data)
+            con.close()
+            email=e_email.get()
+            pwd=e_pwd.get()
+            db=[]
+            for i in data:
+                for j in i:
+                    db.append(j)
+            #print(db)
+            db_email=db[3]
+            db_pwd=db[6]
+            #print(email)
+            
+            if db_email==email:
+                if db_pwd== pwd:
+                    l_msg2=Label(root,text="Login Successfully", font=("Sans-serif",20)).place(x=150 ,y=350)
+                    root.destroy()
+                    import index
+                else:
+                    msg.showerror("Login Status","Password does not matched")
+            else:
+                msg.showerror("Login Status","Email does not matched")
+        except:
+            msg.showerror("Login Status","Email does not matched ")
+            
+        
 root = tk.Tk()                                                                             # it will open blank page
 
 root.geometry("600x600")                                                    # size of web page
