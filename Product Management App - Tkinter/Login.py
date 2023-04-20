@@ -46,9 +46,10 @@ def login():
                 if db_pwd== pwd:
                     l_msg2=Label(root,text="Login Successfully", font=("Sans-serif",20)).place(x=150 ,y=350)
                     root.destroy()
-                    import index
+                    import products
                 else:
                     msg.showerror("Login Status","Password does not matched")
+                    l_msg1=" "
             else:
                 msg.showerror("Login Status","Email does not matched")
         except:
