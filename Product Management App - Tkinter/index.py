@@ -30,7 +30,14 @@ l_desc = Label(root,text="Description",font=("Sans-serif",15),fg="blue").place(x
 l_size = Label(root,text="Size",font=("Sans-serif",15),fg="blue").place(x = 30, y=200)
 l_color = Label(root,text="Color",font=("Sans-serif",15),fg="blue").place(x = 30, y=250)
 l_price = Label(root,text="Price",font=("Sans-serif",15),fg="blue").place(x = 30, y=300)
+l_qty = Label(root,text="Quantity",font=("Sans-serif",15),fg="blue").place(x = 30, y=350)
 
-#Buttons
+#Textbox 
+e_sku = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=100)
+e_desc = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=150)
+e_size = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=200)
+e_color = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=250)
+e_price = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=300)
+e_price = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=350)
 
 
