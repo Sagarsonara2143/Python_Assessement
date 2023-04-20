@@ -64,7 +64,7 @@ root.resizable(width=False,height=False)                            # it will re
 #root.config(bg="white")                                                        # White Backgound 
 
 
-l_lable=Label(root,text="Product Management Application", font=("Sans-serif ",20),fg="white",bg="black").place(x =100, y=20)
+l_label=Label(root,text="Product Management Application", font=("Sans-serif ",20),fg="white",bg="black").place(x =100, y=20)
 
 # Label and place
 l_email=Label(root,text="Email", font=("Sans-serif 15"))
