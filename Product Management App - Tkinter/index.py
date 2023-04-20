@@ -24,3 +24,6 @@ root.resizable(width=False,height=False)
 l = Label(root,text="Products",font=("Sans-serif",25),fg="red", width=32,bg="black")
 l.place(x=0 ,y=10)
 
+
+l_sku = Label(root,text="SKU Code",font=("Sans-serif",15),fg="red")
+l_sku.place()
