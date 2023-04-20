@@ -40,4 +40,9 @@ e_color = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=250)
 e_price = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=300)
 e_price = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=350)
 
+#Add Button
+add=Button(root,text="ADD",font=("Sans-serif 15"),fg="black",bg="orange", width=20).place(x=200,y=400)
+
+root.mainloop()
+
 
