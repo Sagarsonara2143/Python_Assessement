@@ -24,6 +24,13 @@ root.resizable(width=False,height=False)
 l = Label(root,text="Products",font=("Sans-serif",25),fg="red", width=32,bg="black")
 l.place(x=0 ,y=10)
 
+#Label for products
+l_sku = Label(root,text="SKU Code",font=("Sans-serif",15),fg="blue").place(x = 30, y=100)
+l_desc = Label(root,text="Description",font=("Sans-serif",15),fg="blue").place(x = 30, y=150)
+l_size = Label(root,text="Size",font=("Sans-serif",15),fg="blue").place(x = 30, y=200)
+l_color = Label(root,text="Color",font=("Sans-serif",15),fg="blue").place(x = 30, y=250)
+l_price = Label(root,text="Price",font=("Sans-serif",15),fg="blue").place(x = 30, y=300)
 
-l_sku = Label(root,text="SKU Code",font=("Sans-serif",15),fg="red")
-l_sku.place()
+#Buttons
+
+
