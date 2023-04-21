@@ -12,6 +12,11 @@ def create_con():
                 password = "",
                 database = "python"
         )
+
+def view_stock():
+    root.destroy()
+    import stock
+    
 root = tk.Tk()                                                                            
 
 root.geometry("600x600")                                                   
@@ -22,7 +27,7 @@ root.resizable(width=False,height=False)
 
 l_lable=Label(root,text="Product Management Page", font=("Sans-serif",20,"bold"),fg="red",bg="black", width=36).place(x =0, y=20)
 
-stock=Button(root,text="Stock",font=("Sans-serif 15"),fg="Blue",bg="white", width=10).place(x=150,y=100)
+stock=Button(root,text="Stock",font=("Sans-serif 15"),fg="Blue",bg="white", width=10,command=view_stock).place(x=150,y=100)
 add=Button(root,text="ADD",font=("Sans-serif 15"),fg="Blue",bg="white", width=10).place(x=350,y=100)
 
 update=Button(root,text="Update",font=("Sans-serif 15"),fg="Blue",bg="white", width=10).place(x=150,y=180)
