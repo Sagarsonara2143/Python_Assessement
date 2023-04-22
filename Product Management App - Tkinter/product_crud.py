@@ -43,15 +43,15 @@ e_price = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=300)
 e_price = Entry(root,bd=2, width=30,font=("Sans-serif",15)).place(x=170, y=350)
 
 #Add Button
-add=Button(root,text="ADD",font=("Sans-serif 15"),fg="black",bg="orange", width=20, bd=6).place(x=50,y=400)
+add=Button(root,text="ADD",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6).place(x=50,y=400)
 
-search=Button(root,text="SEARCH",font=("Sans-serif 15"),fg="black",bg="orange", width=20, bd=6).place(x=300,y=400)
+search=Button(root,text="SEARCH",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6).place(x=300,y=400)
 
-update=Button(root,text="UPDATE",font=("Sans-serif 15"),fg="black",bg="orange", width=20, bd=6).place(x=50,y=450)
+update=Button(root,text="UPDATE",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6).place(x=50,y=450)
 
-delete=Button(root,text="DELETE",font=("Sans-serif 15"),fg="black",bg="orange", width=20, bd=6).place(x=300,y=450)
+delete=Button(root,text="DELETE",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6).place(x=300,y=450)
 
-stock=Button(root,text="Stock",font=("Sans-serif 15"),fg="black",bg="orange", width=20, bd=6).place(x=200,y=500)
+#stock=Button(root,text="Stock",font=("Sans-serif 15"),fg="black",bg="orange", width=20, bd=6).place(x=200,y=500)
 
 
 root.mainloop()
