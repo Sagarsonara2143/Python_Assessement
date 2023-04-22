@@ -35,7 +35,79 @@ def add_product():
         e_qty.delete(0,'end')
         msg.showinfo("Product Add Status","Product added Successfully")
 
+def search_product():
+    e_desc.delete(0,'end')
+    e_size.delete(0,'end')
+    e_color.delete(0,'end')
+    e_price.delete(0,'end')
+    e_qty.delete(0,'end')
+    if e_sku.get()=="":
+        msg.showerror("Product Search","Please Enter SKU code")
+    else:
+        con = create_con()
+        cursor=con.cursor()
+        query = "select * from products where sku = %s"
+        args=(e_sku.get(),)
+        cursor.execute(query,args)
+        data=cursor.fetchall()
+        if data:
+            for i in data:
+                e_desc.insert(0,i[2])
+                e_size.insert(0,i[3])
+                e_color.insert(0,i[4])
+                e_price.insert(0,i[5])
+                e_qty.insert(0,i[6])
+        else:
+            msg.showerror("Search Status","SKU Code does not found")
+        con.close()
 
+# Update data
+def update_product():
+    if e_sku.get()=="" or e_desc.get()=="" or e_size.get()=="" or e_color.get()=="" or e_price.get()=="" or e_qty.get()=="":
+        msg.showinfo("Product Status","All fields are Manadotary")
+    else:
+        con = create_con()
+        cursor=con.cursor()
+        query="update products set description=%s, size=%s, color=%s, price=%s, qty=%s where sku=%s"
+        args = (e_desc.get(),e_size.get(),e_color.get(),e_price.get(),e_qty.get(),e_sku.get())
+        cursor.execute(query,args)
+        con.commit()
+        con.close()
+        e_sku.delete(0,"end")
+        e_desc.delete(0,"end")
+        e_size.delete(0,"end")
+        e_color.delete(0,"end")
+        e_price.delete(0,"end")
+        e_qty.delete(0,"end")
+        msg.showinfo("Update Status","Data Updated Successfully")
+
+
+#Delete data
+def delete_product():
+    if e_sku.get()=="":
+        msg.showinfo("Delete Status","SKU is mandatory to delete product")
+    else:
+        con = create_con() 
+        cursor=con.cursor()
+        query ="delete from products where sku = %s"
+        args=(e_sku.get(),)
+        ans=msg.askokcancel("Delete Status","Please confirm for delete")
+        if ans:
+            cursor.execute(query,args)
+            con.commit()
+            e_sku.delete(0,'end')
+            e_desc.delete(0,'end')
+            e_size.delete(0,'end')
+            e_color.delete(0,'end')
+            e_price.delete(0,'end')
+            e_qty.delete(0,'end')
+            msg.showinfo("Delete Status","Product is deleted Successfully")
+        else:
+            msg.showinfo("Delete Status","Product does not deleted")
+        cursor.close()
+
+
+    
 root = tk.Tk()                                                                             
 
 root.geometry("600x600")                                                        
@@ -71,11 +143,11 @@ e_qty.place(x=170, y=350)
 #Add Button
 add=Button(root,text="ADD",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6, command=add_product).place(x=100,y=400)
 
-search=Button(root,text="SEARCH",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6).place(x=300,y=400)
+search=Button(root,text="SEARCH",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6, command=search_product).place(x=300,y=400)
 
-update=Button(root,text="UPDATE",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6).place(x=100,y=450)
+update=Button(root,text="UPDATE",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6, command=update_product).place(x=100,y=450)
 
-delete=Button(root,text="DELETE",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6).place(x=300,y=450)
+delete=Button(root,text="DELETE",font=("Sans-serif 15"),fg="black",bg="orange", width=15, bd=6, command=delete_product).place(x=300,y=450)
 
 #stock=Button(root,text="Stock",font=("Sans-serif 15"),fg="black",bg="orange", width=20, bd=6).place(x=200,y=500)
 
