@@ -20,9 +20,20 @@ def add_product():
         msg.showinfo("Product Status","All fields are Manadotary")
     else:
         #l_msg.after(1000,l_msg.destroy())
-        msg.showinfo("msg","Successfully")
-        
-
+        con=create_con()
+        cursor=con.cursor()
+        query="insert into products (sku,description,size,color,price,qty) values (%s,%s,%s,%s,%s,%s)"
+        args=(e_sku.get(),e_desc.get(),e_size.get(),e_color.get(),e_price.get(),e_qty.get())
+        cursor.execute(query,args)
+        con.commit()
+        con.close()
+        e_sku.delete(0,'end')
+        e_desc.delete(0,'end')
+        e_size.delete(0,'end')
+        e_color.delete(0,'end')
+        e_price.delete(0,'end')
+        e_qty.delete(0,'end')
+        msg.showinfo("Product Add Status","Product added Successfully")
 
 
 root = tk.Tk()                                                                             
